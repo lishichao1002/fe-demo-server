@@ -3,12 +3,12 @@ let interceptor = require('express-interceptor')
 exports.LoginInterceptor = interceptor(function (req, res) {
   return {
     isInterceptable: function () {
-      return [
+      return req.route.path ? [
         '/profile',
         '/modifyPassword',
         '/users',
         '/menus'
-      ].includes(req.route.path)
+      ].includes(req.route.path) : false
     },
     intercept: function (body, send) {
       if (req.sessionStore.sessions.user) {
