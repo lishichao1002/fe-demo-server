@@ -35,6 +35,11 @@ let user = {username: 'admin', password: 'admin1234'}
  * /users/delete 删除用户
  */
 //获取当前登录用户详情
+app.get('/', function (req, res) {
+  res.send('test for zhanglv')
+})
+
+//获取当前登录用户详情
 app.get('/profile', function (req, res) {
   res.send(req.session.user)
 })
