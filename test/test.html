@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<button id="login">login</button>
+<button id="logout">logout</button>
+<button id="menus">menus</button>
+<button id="users">users</button>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $('#login').click(() => {
+    $.post('http://localhost:3000/login', {
+      username: 'admin',
+      password: 'admin1234'
+    }, console.log)
+  })
+
+  $('#logout').click(() => {
+    $.get('http://localhost:3000/logout', console.log)
+  })
+
+  $('#menus').click(() => {
+    $.post('http://localhost:3000/menus', console.log)
+  })
+
+  $('#users').click(() => {
+    $.post('http://localhost:3000/users', {
+      currentPage: 1,
+      pageSize: 10
+    }, console.log)
+  })
+</script>
+
+</body>
+</html>

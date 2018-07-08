@@ -1,0 +1,28 @@
+{
+  "name": "fe-demo-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lishichao1002/fe-demo-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lishichao1002/fe-demo-server/issues"
+  },
+  "homepage": "https://github.com/lishichao1002/fe-demo-server#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-cors": "^v0.0.3",
+    "express-interceptor": "^1.2.0",
+    "express-session": "^1.15.6",
+    "mockjs": "^1.0.1-beta3"
+  }
+}
