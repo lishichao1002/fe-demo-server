@@ -1,21 +1,23 @@
-let express = require('express')
-let session = require('express-session')
-let cors = require('express-cors')
-let bodyParser = require('body-parser')
+const express = require('express')
+const session = require('express-session')
+const cors = require('express-cors')
+const bodyParser = require('body-parser')
+const {registerBPC} = require('./bpc')
 
 let LoginInterceptor = require('./login-interceptor').LoginInterceptor
 let all_data = require('./data').data
 
 let app = express()
 
-app.use(session({secret: 'the session keys', cookie: {maxAge: 60000}}))
-app.use(LoginInterceptor)
+// app.use(session({secret: 'the session keys', cookie: {maxAge: 60000}}))
+// app.use(LoginInterceptor)
 app.use(cors({
   allowedOrigins: [
     'http://localhost:63342',
     'http://localhost:8080',
     'http://localhost:3000',
     'http://localhost:8000',
+    'http://test.b-pc.com:8080',
   ]
 }))
 app.use(bodyParser.urlencoded({
@@ -116,5 +118,7 @@ app.post('/users/delete', function (req, res) {
   all_data = all_data.filter(row => row.id !== id)
   res.send({status: 0, desc: 'success'})
 })
+
+registerBPC(app)
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))

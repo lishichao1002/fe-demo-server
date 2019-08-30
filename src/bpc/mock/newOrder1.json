@@ -1,0 +1,36 @@
+{
+  "errno": 0,
+  "errmsg": "ok",
+  "requestId": "f17d7b9f42a1e1fb",
+  "time": 1566282305,
+  "msectime": 1566282305939,
+  "data": {
+    "newOrders": [
+      {
+        "orderId": "5764607659554701541",
+        "orderIndex": 1,
+        "shopId": 5764607661912621097,
+        "orderType": 1,
+        "displayStatus": 1,
+        "highlight": 0,
+        "itemReadyEta": 0,
+        "shopConfirmTime": 1560141522,
+        "createTime": 1560141509,
+        "updateTime": 1560141512,
+        "remark": "",
+        "orderStatus": 100,
+        "currency": "MXN",
+        "isPrinted": 1,
+        "displayInfo": {
+          "tips": "",
+          "statusText": "\u8bf7\u57281\u5206\u949f\u5185\u5904\u7406",
+          "countDown": false,
+          "tags": [],
+          "type": 0
+        },
+        "payType": 1
+      }
+    ],
+    "count": 8
+  }
+}

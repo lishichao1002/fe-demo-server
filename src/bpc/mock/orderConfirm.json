@@ -1,0 +1,18 @@
+{
+  "errno": 0,
+  "errmsg": "ok",
+  "requestId": "f17bdf743874d7ad",
+  "time": 1567074291,
+  "msectime": 1567074291604,
+  "data": {
+    "confirmedIds": [
+    ],
+    "failIds": [
+      [
+        "1152921553080484110",
+        55004,
+        "Shop is not open!:shop is not open"
+      ]
+    ]
+  }
+}
